@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-syne: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --bg: #f8f7f4;
+  --ink: #1a1a1a;
+  --accent: #2563eb;
+  --card-bg: #ffffff;
+  --card-border: #1a1a1a;
+  --border-faint: rgba(26, 26, 26, 0.12);
+  --ink-faint: rgba(26, 26, 26, 0.08);
+  --ink-medium: rgba(26, 26, 26, 0.65);
+  --dot-color: rgba(26, 26, 26, 0.09);
+  --btn-bg: #1a1a1a;
+  --btn-text: #f8f7f4;
+  --sidebar-bg: #f8f7f4;
+  --modal-bg: #f8f7f4;
+}
+
+html.dark, [data-theme="dark"] {
+  --bg: #0e0f13;
+  --ink: #f4f4f6;
+  --accent: #3b82f6;
+  --card-bg: #16171d;
+  --card-border: #2a2c36;
+  --border-faint: rgba(244, 244, 246, 0.14);
+  --ink-faint: rgba(244, 244, 246, 0.08);
+  --ink-medium: rgba(244, 244, 246, 0.65);
+  --dot-color: rgba(244, 244, 246, 0.1);
+  --btn-bg: #f4f4f6;
+  --btn-text: #0e0f13;
+  --sidebar-bg: #121318;
+  --modal-bg: #16171d;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-custom {
+  font-family: 'Space Mono', monospace;
+}
+
+.label-mono {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-medium);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.dot-grid {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+  transition: background-image 0.25s ease;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-faint);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-medium);
+}

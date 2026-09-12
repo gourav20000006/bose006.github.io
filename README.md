@@ -1,11 +1,32 @@
-<div align="center">
+# Gourav Bose — Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Portfolio website for Gourav Bose, Data Entry Specialist & Operations Professional.
 
-  <h1>Built with AI Studio</h2>
+## Tech Stack
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Motion (Framer Motion)**
+- **Lucide Icons**
+- **Vite**
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Getting Started Locally
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. **Extract the ZIP file** to your preferred folder.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-</div>
+## Build for Production
+
+To create an optimized production build:
+```bash
+npm run build
+```
+The output will be in the `dist/` directory, ready to deploy to any hosting provider (Vercel, Netlify, Cloud Run, GitHub Pages, etc.).
