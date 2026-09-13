@@ -13,7 +13,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="pt-16 pb-20 border-t border-[var(--border-faint)] relative">
+    <section id="contact" className="scroll-mt-10 lg:scroll-mt-14 pt-12 sm:pt-16 pb-20 border-t border-[var(--border-faint)] relative">
       <div className="flex justify-between items-baseline mb-6">
         <span className="label-mono">Contact / 06</span>
         <span className="label-mono hidden sm:inline-block">Direct Inquiries</span>

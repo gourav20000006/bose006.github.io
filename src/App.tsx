@@ -42,13 +42,13 @@ export default function App() {
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)] selection:bg-[var(--accent)] selection:text-white relative transition-colors duration-250">
       <BackgroundEffects />
 
-      {/* Variation 2 App Shell Grid */}
-      <div className="relative z-10 min-h-screen lg:grid lg:grid-cols-[280px_1fr]">
+      {/* Modern High-Precision Desktop Shell Grid */}
+      <div className="relative z-10 min-h-screen lg:grid lg:grid-cols-[280px_1fr] xl:grid-cols-[310px_1fr] 2xl:grid-cols-[330px_1fr]">
         {/* Left Aside Navigation */}
         <Sidebar activeSection={activeSection} />
 
         {/* Right Main Scrollable Content */}
-        <main className="px-6 py-8 sm:px-12 sm:py-14 md:px-16 md:py-16 lg:px-20 lg:py-20 max-w-[1240px] w-full">
+        <main className="px-6 py-8 sm:px-10 sm:py-12 md:px-12 md:py-14 lg:px-12 xl:px-16 2xl:px-20 max-w-[1520px] w-full min-w-0">
           <Hero onScrollToWork={scrollToWork} />
           <About />
           <WorkSection />

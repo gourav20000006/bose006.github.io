@@ -17,7 +17,7 @@ export const CertificatesSection: React.FC = () => {
   };
 
   return (
-    <section id="certificates" className="py-16 sm:py-20 border-b border-[var(--border-faint)]">
+    <section id="certificates" className="scroll-mt-10 lg:scroll-mt-14 py-14 sm:py-20 border-b border-[var(--border-faint)]">
       <div className="space-y-12">
         {/* Section Header */}
         <div>

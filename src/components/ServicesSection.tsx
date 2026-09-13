@@ -6,7 +6,7 @@ export const ServicesSection: React.FC = () => {
   const [hoveredServiceId, setHoveredServiceId] = useState<string | null>(null);
 
   return (
-    <section id="services" className="pt-16 pb-24 sm:pb-32 border-t border-[var(--border-faint)] relative">
+    <section id="services" className="scroll-mt-10 lg:scroll-mt-14 pt-12 sm:pt-16 pb-20 sm:pb-28 border-t border-[var(--border-faint)] relative">
       <div>
         {/* Section Header */}
         <div className="flex justify-between items-baseline mb-8 sm:mb-12">

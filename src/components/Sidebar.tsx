@@ -28,7 +28,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
     setMobileMenuOpen(false);
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      const topOffset = window.innerWidth >= 1024 ? 36 : 76;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -136,7 +142,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
       </header>
 
       {/* Desktop Sticky Aside Sidebar (lg: and above) */}
-      <aside className="hidden lg:flex sticky top-0 h-screen w-[280px] bg-[var(--sidebar-bg)] border-r-[1.5px] border-[var(--card-border)] p-8 flex-col justify-between z-30 select-none overflow-y-auto transition-colors">
+      <aside className="hidden lg:flex sticky top-0 h-screen w-[280px] xl:w-[310px] 2xl:w-[330px] bg-[var(--sidebar-bg)] border-r-[1.5px] border-[var(--card-border)] p-7 xl:p-8 flex-col justify-between z-30 select-none overflow-y-auto transition-colors">
         <motion.div
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
@@ -248,17 +254,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
 
           <div>
             <div className="label-mono text-[10px]">Direct Comms</div>
-            <div className="mt-1 flex items-center justify-between text-xs">
+            <div className="mt-1 flex items-center justify-between text-xs gap-1.5">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="text-xs font-mono-custom text-[var(--ink)] hover:text-[var(--accent)] transition-colors truncate max-w-[150px]"
+                className="text-[11px] xl:text-xs font-mono-custom text-[var(--ink)] hover:text-[var(--accent)] transition-colors select-all break-all"
                 title={PERSONAL_INFO.email}
               >
                 {PERSONAL_INFO.email}
               </a>
               <button
                 onClick={handleCopyEmail}
-                className="p-1 text-[var(--ink-medium)] hover:text-[var(--ink)] transition-colors cursor-pointer"
+                className="p-1 text-[var(--ink-medium)] hover:text-[var(--ink)] transition-colors cursor-pointer shrink-0"
                 title="Copy email"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}

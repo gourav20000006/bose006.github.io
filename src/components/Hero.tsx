@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToWork }) => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg sm:text-xl md:text-2xl text-[var(--ink-medium)] max-w-2xl leading-relaxed mb-8 sm:mb-10 font-normal transition-colors"
+          className="text-lg sm:text-xl md:text-2xl text-[var(--ink-medium)] max-w-2xl lg:max-w-3xl leading-relaxed mb-8 sm:mb-10 font-normal transition-colors"
         >
           Data Entry Specialist &amp; Operations Professional. Transforming raw data into actionable insights with 99% precision.
         </motion.p>

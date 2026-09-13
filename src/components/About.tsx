@@ -4,7 +4,7 @@ import { QualificationsToggle } from './QualificationsToggle';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="pt-16 pb-24 sm:pb-32 border-t border-[var(--border-faint)] relative">
+    <section id="about" className="scroll-mt-10 lg:scroll-mt-14 pt-12 sm:pt-16 pb-20 sm:pb-28 border-t border-[var(--border-faint)] relative">
       <div>
         {/* Section Header */}
         <div className="flex justify-between items-baseline mb-8 sm:mb-12">
@@ -18,13 +18,13 @@ export const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
-          className="text-xl sm:text-2xl md:text-[1.65rem] leading-[1.4] text-[var(--ink)] max-w-4xl font-normal transition-colors"
+          className="text-xl sm:text-2xl md:text-[1.65rem] lg:text-[1.8rem] leading-[1.38] text-[var(--ink)] max-w-5xl font-normal transition-colors"
         >
           Motivated Commerce student with practical experience in computer operations and data management. Skilled in utilizing intermediate Excel functions, VLOOKUP, and database retrieval.
         </motion.p>
 
         {/* Secondary context */}
-        <p className="mt-4 text-sm sm:text-base text-[var(--ink-medium)] max-w-3xl leading-relaxed transition-colors">
+        <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-[var(--ink-medium)] max-w-4xl leading-relaxed transition-colors">
           Having developed a disciplined and detail-oriented approach through operations at Flipkart, I am prepared to contribute effectively to professional business environments with high accuracy.
         </p>
 
