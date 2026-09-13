@@ -137,7 +137,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
 
       {/* Desktop Sticky Aside Sidebar (lg: and above) */}
       <aside className="hidden lg:flex sticky top-0 h-screen w-[280px] bg-[var(--sidebar-bg)] border-r-[1.5px] border-[var(--card-border)] p-8 flex-col justify-between z-30 select-none overflow-y-auto transition-colors">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -16 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.65, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+        >
           {/* Brand */}
           <a
             href="#top"
@@ -156,7 +160,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
           </a>
 
           {/* Nav Links with Blow-Up and Motion Blur Focus Effect */}
-          <nav 
+          <motion.nav 
+            initial={{ opacity: 0, x: -12 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.65, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
             className="mt-14 space-y-3.5"
             onMouseLeave={() => setHoveredOption(null)}
           >
@@ -208,11 +215,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
                 </motion.button>
               );
             })}
-          </nav>
-        </div>
+          </motion.nav>
+        </motion.div>
 
         {/* Sidebar Bottom Metadata & Controls */}
-        <div className="space-y-4 pt-6 border-t border-[var(--border-faint)]">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          className="space-y-4 pt-6 border-t border-[var(--border-faint)]"
+        >
           {/* Theme Switcher in Sidebar */}
           <div>
             <div className="label-mono text-[10px] mb-1.5">Theme</div>
@@ -253,7 +265,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </aside>
     </>
   );

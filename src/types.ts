@@ -57,3 +57,13 @@ export interface Certificate {
   badgeColor: string;
   verified: boolean;
 }
+
+export interface Qualification {
+  id: string;
+  degree: string;
+  institution: string;
+  status: string;
+  focusAreas: string;
+  period: string;
+}
+

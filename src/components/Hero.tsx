@@ -21,9 +21,9 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToWork }) => {
       <div>
         {/* Editorial Mono Label */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
           className="label-mono mb-6 sm:mb-8 flex items-center gap-3"
         >
           <span>[ Portfolio 2026 ]</span>
@@ -33,9 +33,9 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToWork }) => {
 
         {/* Hero Title in Syne 800 Display Font */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.8, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           className="font-syne font-extrabold text-[clamp(3.5rem,8.5vw,7.8rem)] leading-[0.85] tracking-[-0.04em] uppercase text-[var(--ink)] mb-6 sm:mb-8 transition-colors"
         >
           Systems<br />of Data
@@ -43,9 +43,9 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToWork }) => {
 
         {/* Hero Description */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.75, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="text-lg sm:text-xl md:text-2xl text-[var(--ink-medium)] max-w-2xl leading-relaxed mb-8 sm:mb-10 font-normal transition-colors"
         >
           Data Entry Specialist &amp; Operations Professional. Transforming raw data into actionable insights with 99% precision.
@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToWork }) => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-wrap items-center gap-3 sm:gap-4"
         >
           <motion.a

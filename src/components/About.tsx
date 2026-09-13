@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { QualificationsToggle } from './QualificationsToggle';
 
 export const About: React.FC = () => {
   return (
@@ -30,11 +31,15 @@ export const About: React.FC = () => {
         {/* 3 Stat Cards in Grid-3 */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-20px' }}
             whileHover={{ scale: 1.015, y: -3 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 24, mass: 0.6 }}
+            transition={{ 
+              opacity: { duration: 0.6, delay: 0.1 },
+              y: { duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] },
+              scale: { type: 'spring', stiffness: 260, damping: 24 }
+            }}
             className="border border-[var(--card-border)] p-6 sm:p-8 bg-[var(--card-bg)] rounded shadow-sm hover:border-[var(--accent)] transition-colors group cursor-default"
           >
             <h3 className="font-syne font-extrabold text-4xl sm:text-5xl text-[var(--ink)] mb-2 group-hover:text-[var(--accent)] transition-colors">
@@ -44,11 +49,15 @@ export const About: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-20px' }}
             whileHover={{ scale: 1.015, y: -3 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 24, mass: 0.6 }}
+            transition={{ 
+              opacity: { duration: 0.6, delay: 0.2 },
+              y: { duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] },
+              scale: { type: 'spring', stiffness: 260, damping: 24 }
+            }}
             className="border border-[var(--card-border)] p-6 sm:p-8 bg-[var(--card-bg)] rounded shadow-sm hover:border-[var(--accent)] transition-colors group cursor-default"
           >
             <h3 className="font-syne font-extrabold text-4xl sm:text-5xl text-[var(--ink)] mb-2 group-hover:text-[var(--accent)] transition-colors">
@@ -58,11 +67,15 @@ export const About: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-20px' }}
             whileHover={{ scale: 1.015, y: -3 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 24, mass: 0.6 }}
+            transition={{ 
+              opacity: { duration: 0.6, delay: 0.3 },
+              y: { duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] },
+              scale: { type: 'spring', stiffness: 260, damping: 24 }
+            }}
             className="border border-[var(--card-border)] p-6 sm:p-8 bg-[var(--card-bg)] rounded shadow-sm hover:border-[var(--accent)] transition-colors group cursor-default"
           >
             <h3 className="font-syne font-extrabold text-4xl sm:text-5xl text-[var(--ink)] mb-2 group-hover:text-[var(--accent)] transition-colors">
@@ -71,6 +84,9 @@ export const About: React.FC = () => {
             <span className="label-mono text-[var(--ink-medium)]">Data Accuracy</span>
           </motion.div>
         </div>
+
+        {/* Academic Qualifications Collapsible */}
+        <QualificationsToggle />
       </div>
     </section>
   );

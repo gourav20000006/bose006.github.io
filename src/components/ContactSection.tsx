@@ -93,6 +93,32 @@ export const ContactSection: React.FC = () => {
                 </>
               )}
             </motion.button>
+
+            <motion.a
+              href={PERSONAL_INFO.fiverr}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.08, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 900, damping: 26, mass: 0.5 }}
+              className="inline-flex items-center justify-center px-6 py-3.5 bg-transparent hover:bg-white/10 text-[#f8f7f4] border border-white/30 font-mono-custom text-xs uppercase tracking-widest font-semibold rounded transition-colors cursor-pointer"
+            >
+              <span>Fiverr</span>
+              <ArrowUpRight className="w-4 h-4 ml-2" />
+            </motion.a>
+
+            <motion.a
+              href={PERSONAL_INFO.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.08, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 900, damping: 26, mass: 0.5 }}
+              className="inline-flex items-center justify-center px-6 py-3.5 bg-transparent hover:bg-white/10 text-[#f8f7f4] border border-white/30 font-mono-custom text-xs uppercase tracking-widest font-semibold rounded transition-colors cursor-pointer"
+            >
+              <span>Instagram</span>
+              <ArrowUpRight className="w-4 h-4 ml-2" />
+            </motion.a>
           </div>
         </div>
       </motion.div>

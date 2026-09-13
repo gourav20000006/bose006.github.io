@@ -1,4 +1,4 @@
-import { Project, Service, ProcessStep, SkillCategory, Certificate } from '../types';
+import { Project, Service, ProcessStep, SkillCategory, Certificate, Qualification } from '../types';
 
 export const PERSONAL_INFO = {
   name: 'GOURAV BOSE',
@@ -7,8 +7,10 @@ export const PERSONAL_INFO = {
   email: 'gouravbose6@gmail.com', // Updated from gouravbose@gmail.com
   phone: '+91 7679383915',
   location: 'West Bengal, India',
-  linkedin: 'https://linkedin.com/in/gourav-bose',
+  linkedin: 'https://www.linkedin.com/in/gourav-b-3a9498405/',
   github: 'https://github.com/gourav20000006',
+  fiverr: 'https://www.fiverr.com/gourav_006?public_mode=true',
+  instagram: 'https://www.instagram.com/go6av_/?hl=en',
   about:
     'Motivated Commerce student with practical experience in computer operations and data management. Skilled in utilizing intermediate Excel functions, including Vlookup and data analysis, data entry tools, to organize and retrieve complex information. Having developed a disciplined and detail-oriented approach through operations at Flipkart, I am prepared to contribute effectively to professional business environments.',
   stats: [
@@ -294,3 +296,31 @@ export const CERTIFICATES: Certificate[] = [
     verified: true,
   },
 ];
+
+export const QUALIFICATIONS: Qualification[] = [
+  {
+    id: 'secondary-school',
+    degree: 'Secondary School (Class 10th)',
+    status: 'Passed 2023–24',
+    period: '2023–24',
+    institution: 'Kanchrapara Harnett English Medium School',
+    focusAreas: 'Economics, English',
+  },
+  {
+    id: 'higher-secondary',
+    degree: 'Higher Secondary (Class 12th) – Commerce',
+    status: 'Passed 2025–26',
+    period: '2025–26',
+    institution: 'Kanchrapara Harnett English Medium School',
+    focusAreas: 'Accountancy, Business Studies, and Economics',
+  },
+  {
+    id: 'bcom-hons',
+    degree: 'Bachelor of Commerce (B.Com Hons)',
+    status: 'Currently Pursuing',
+    period: 'Present',
+    institution: 'Rishi Bankim Chandra College',
+    focusAreas: 'Advanced Accountancy and Professional Computer Skills',
+  },
+];
+
